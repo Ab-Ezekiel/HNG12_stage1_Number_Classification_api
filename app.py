@@ -1,7 +1,10 @@
 from flask import Flask, request, jsonify
 import requests
 from flask_cors import CORS
+import os
 
+
+SECRET_KEY = os.getenv("SECRET_KEY", "default_secret")
 
 app = Flask(__name__)
 CORS(app)
